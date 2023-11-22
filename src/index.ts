@@ -44,3 +44,15 @@ const complexUser: ComplexUser = {
         lng: 456
     }
 }
+
+
+
+// Tipizzare un array
+
+const user1 = {id: 1, name: 'Ryu', surname: 'unknown'}
+const user2 = {id: 2, name: 'Ken', surname: 'Masters'}
+const user3 = {id: 3, name: 'Guile', surname: 'unknown'}
+
+const userList: User[] = [user1, user2, user3]
+
+//si può usare anche la versione alternativa con Array<User>
