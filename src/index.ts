@@ -11,7 +11,7 @@ interface User {
 
 let user: User;
 
-user = {id: 1, name: 'Augusto', surname: 'Ruggieri'};
+user = { id: 1, name: 'Augusto', surname: 'Ruggieri' };
 
 log(`${user.name} ${user.surname}`);
 
@@ -49,9 +49,9 @@ const complexUser: ComplexUser = {
 
 // Tipizzare un array
 
-const user1 = {id: 1, name: 'Ryu', surname: 'unknown'}
-const user2 = {id: 2, name: 'Ken', surname: 'Masters'}
-const user3 = {id: 3, name: 'Guile', surname: 'unknown'}
+const user1 = { id: 1, name: 'Ryu', surname: 'unknown' }
+const user2 = { id: 2, name: 'Ken', surname: 'Masters' }
+const user3 = { id: 3, name: 'Guile', surname: 'unknown' }
 
 const userList: User[] = [user1, user2, user3]
 
@@ -70,8 +70,8 @@ class Product {
 
     constructor(id: number, price: number, name: string) {
         this.id = id,
-        this.price = price,
-        this.name = name
+            this.price = price,
+            this.name = name
     }
 }
 
@@ -89,3 +89,18 @@ log(product2.name);
 /* class Product {
     constructor(private id: number, private price: number, private name: string) {}
 } */
+
+
+
+// Esempio di tipizzazione di una funzione
+
+// È bene specificare il tipo del valore che viene ritornato dalla funzione, se non ritorna nulla usare void
+function multiply(a: number, b: number): number {
+    return a * b;
+}
+
+function sayHi(name: string): void {
+    console.log('Hello ' + name);
+}
+
+log(multiply(2, 3));
