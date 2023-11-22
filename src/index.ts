@@ -56,3 +56,36 @@ const user3 = {id: 3, name: 'Guile', surname: 'unknown'}
 const userList: User[] = [user1, user2, user3]
 
 //si può usare anche la versione alternativa con Array<User>
+
+
+
+// Per tipizzare i dati, oltre alla interface, si può usare la class, 
+// anche se occupa più memoria rispetto all'interface e in fase di compilazione 
+// è più pesante perché dietro le quinte viene convertita in una funzione.
+
+class Product {
+    id: number;
+    price: number;
+    name: string
+
+    constructor(id: number, price: number, name: string) {
+        this.id = id,
+        this.price = price,
+        this.name = name
+    }
+}
+
+// Utilizzando una classe potremo utilizzare i parametri tipizzati per assegnare dei valori alle proprietà
+// per fare questo, però, abbiamo bisogno del costructor
+
+const product1: Product = new Product(1, 500, 'Sony Playstation');
+const product2: Product = new Product(2, 450, 'Microsoft Xbox');
+const product3: Product = new Product(3, 270, 'Nintendo Switch')
+
+log(product2.name);
+
+// Per snellire il codice possiamo definire la classe anche in questo modo:
+
+/* class Product {
+    constructor(private id: number, private price: number, private name: string) {}
+} */
